@@ -321,10 +321,43 @@ class Source(object):
         """
         category_articles = self.categories_to_articles()
         feed_articles = self.feeds_to_articles()
-
-        articles = feed_articles + category_articles
+        url_articles = self.url_to_articles()
+        articles = url_articles + feed_articles + category_articles
         uniq = {article.url: article for article in articles}
         return list(uniq.values())
+
+    def url_to_articles(self):
+        """Returns articles given the 'build' url
+        """
+        articles = []
+        # res = requests.get(self.url, headers=self.config.headers)
+        # res.encoding = 'utf-8'
+        html = network.get_html_2XX_only(self.url, self.config)
+        url_list = self.extractor.get_urls(html)
+        url_list = list(set([urls.prepare_url(u, self.url) for u in url_list]))
+        url_list = [u for u in url_list if self.domain in u]
+        cur_articles = []
+        before_purge = len(url_list)
+
+        for url in url_list:
+            article = Article(
+                url=url,
+                source_url=url,
+                config=self.config)
+            cur_articles.append(article)
+
+        # cur_articles = self.purge_articles('url', cur_articles)
+        after_purge = len(cur_articles)
+
+        if self.config.memoize_articles:
+            cur_articles = utils.memoize_articles(self, cur_articles)
+        after_memo = len(cur_articles)
+
+        articles.extend(cur_articles)
+
+        log.debug('%d->%d->%d for %s' %
+                  (before_purge, after_purge, after_memo, self.url))
+        return articles
 
     def generate_articles(self, limit=5000):
         """Saves all current articles of news source, filter out bad urls
