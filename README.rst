@@ -5,12 +5,12 @@ Newspaper3k: Article scraping & curation
     :target: http://badge.fury.io/py/newspaper3k.svg
         :alt: Latest version
 
-.. image:: https://travis-ci.org/codelucas/newspaper.svg
-        :target: http://travis-ci.org/codelucas/newspaper/
+.. image:: https://travis-ci.org/huangsiyuan924/newspaper.svg
+        :target: http://travis-ci.org/huangsiyuan924/newspaper/
         :alt: Build status
 
-.. image:: https://coveralls.io/repos/github/codelucas/newspaper/badge.svg?branch=master
-        :target: https://coveralls.io/github/codelucas/newspaper
+.. image:: https://coveralls.io/repos/github/huangsiyuan924/newspaper/badge.svg?branch=master
+        :target: https://coveralls.io/github/huangsiyuan924/newspaper
         :alt: Coverage status
 
 
@@ -26,7 +26,7 @@ Inspired by `requests`_ for its simplicity and powered by `lxml`_ for its speed:
 
 **Newspaper is a Python3 library**! Or, view our **deprecated and buggy** `Python2 branch`_
 
-.. _`Python2 branch`: https://github.com/codelucas/newspaper/tree/python-2-head
+.. _`Python2 branch`: https://github.com/huangsiyuan924/newspaper/tree/python-2-head
 
 A Glance:
 ---------
@@ -269,7 +269,7 @@ NOTE: If you find problem installing ``libpng12-dev``, try installing ``libpng-d
 
 - Download NLP related corpora::
 
-    $ curl https://raw.githubusercontent.com/codelucas/newspaper/master/download_corpora.py | python3
+    $ curl https://raw.githubusercontent.com/huangsiyuan924/newspaper/master/download_corpora.py | python3
 
 - Install the distribution via pip::
 
@@ -285,7 +285,7 @@ NOTE: If you find problem installing ``libpng12-dev``, try installing ``libpng-d
 
     $ pip3 install newspaper3k
 
-    $ curl https://raw.githubusercontent.com/codelucas/newspaper/master/download_corpora.py | python3
+    $ curl https://raw.githubusercontent.com/huangsiyuan924/newspaper/master/download_corpora.py | python3
 
 
 **Otherwise**, install with the following:
@@ -300,7 +300,7 @@ NOTE: You will still most likely need to install the following libraries via you
 
     $ pip3 install newspaper3k
 
-    $ curl https://raw.githubusercontent.com/codelucas/newspaper/master/download_corpora.py | python3
+    $ curl https://raw.githubusercontent.com/huangsiyuan924/newspaper/master/download_corpora.py | python3
 
 Donations
 ---------
@@ -308,7 +308,7 @@ Donations
 Your donations are greatly appreciated! They will free me up to work on this project more,
 to take on things like: adding new features, bug-fix support, addressing concerns with the library.
 
-- My PayPal link: `https://www.paypal.me/codelucas`_
+- My PayPal link: `https://www.paypal.me/huangsiyuan924`_
 - My `Venmo`_ handle: @Lucas-Ou-Yang
 
 Development
@@ -317,7 +317,7 @@ Development
 If you'd like to contribute and hack on the newspaper project, feel free to clone
 a development version of this repository locally::
 
-    git clone git://github.com/codelucas/newspaper.git
+    git clone git://github.com/huangsiyuan924/newspaper.git
 
 Once you have a copy of the source, you can embed it in your Python package,
 or install it into your site-packages easily::
@@ -354,12 +354,12 @@ Newspaper uses a lot of `python-goose's`_ parsing code. View their license `here
 Please feel free to `email & contact me`_ if you run into issues or just would like
 to talk about the future of this library and news extraction in general!
 
-.. _`Lucas Ou-Yang`: http://codelucas.com
+.. _`Lucas Ou-Yang`: http://huangsiyuan924.com
 .. _`email & contact me`: mailto:lucasyangpersonal@gmail.com
 .. _`python-goose's`: https://github.com/grangier/python-goose
-.. _`here`: https://github.com/codelucas/newspaper/blob/master/GOOSE-LICENSE.txt
+.. _`here`: https://github.com/huangsiyuan924/newspaper/blob/master/GOOSE-LICENSE.txt
 
-.. _`https://www.paypal.me/codelucas`: https://www.paypal.me/codelucas
+.. _`https://www.paypal.me/huangsiyuan924`: https://www.paypal.me/huangsiyuan924
 .. _`Venmo`: https://www.venmo.com/Lucas-Ou-Yang
 
 .. _`Quickstart guide`: https://newspaper.readthedocs.io/en/latest/
